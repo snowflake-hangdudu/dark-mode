@@ -9,6 +9,7 @@ import { fetchStylesheet } from '../src/background/stylesheet-fetch.js';
 test('动态引擎重复刷新不重建，切换滤镜和关闭会清理，重新开启能恢复', async () => {
   const calls = [];
   const context = vm.createContext({
+    document: { readyState: 'complete', hidden: true },
     DarkReader: {
       setFetchMethod() {},
       enable(theme, fixes) { calls.push({ theme, fixes }); },
@@ -24,6 +25,7 @@ test('动态引擎重复刷新不重建，切换滤镜和关闭会清理，重�
   vm.runInContext(source, context);
   assert.equal(context.__dmApplyDynamicTheme, apply);
   assert.equal(calls.length, 1);
+  assert.equal(calls[0].theme.immediateModify, true);
   assert.deepEqual(Array.from(calls[0].fixes.ignoreImageAnalysis), ['*']);
   apply({ ...payload, dynamicTheme: { ...payload.dynamicTheme, brightness: 120 } });
   assert.equal(calls[1].theme.brightness, 120);
@@ -33,6 +35,25 @@ test('动态引擎重复刷新不重建，切换滤镜和关闭会清理，重�
   assert.equal(calls[2], 'disabled');
   apply(payload);
   assert.equal(calls.length, 4);
+});
+
+test('首次加载保持就绪监听，已加载页面启用不等待可见性事件', async () => {
+  const calls = [];
+  const document = { readyState: 'loading', hidden: true };
+  const context = vm.createContext({ document, DarkReader: {
+    setFetchMethod() {}, enable(theme) { calls.push(theme); }, disable() {}
+  } });
+  vm.runInContext(await readFile(new URL('../src/content/dynamic-theme.js', import.meta.url), 'utf8'), context);
+  const payload = { active: true, mode: 'theme', dynamicTheme: { mode: 1 } };
+  context.__dmApplyDynamicTheme(payload);
+  assert.equal(calls[0].immediateModify, false);
+  document.readyState = 'complete';
+  document.hidden = false;
+  context.__dmApplyDynamicTheme(payload);
+  assert.equal(calls.length, 2);
+  assert.equal(calls[1].immediateModify, true);
+  context.__dmApplyDynamicTheme(payload);
+  assert.equal(calls.length, 2);
 });
 
 test('样式表读取限制来源、协议、响应类型、大小与重定向', async () => {

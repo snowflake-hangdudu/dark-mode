@@ -22,10 +22,14 @@ if (!globalThis.__dmApplyDynamicTheme) {
     });
     globalThis.__dmApplyDynamicTheme = (payload) => {
       const active = payload?.active && payload.mode === 'theme' && payload.dynamicTheme;
-      const next = active ? JSON.stringify([payload.dynamicTheme, payload.keepMediaColors]) : '';
+      // The engine snapshots visibility when first injected (possibly in a
+      // background tab). A later popup activation must not wait for another
+      // visibility event when this document is already ready.
+      const immediateModify = typeof document !== 'undefined' && document.readyState !== 'loading';
+      const next = active ? JSON.stringify([payload.dynamicTheme, payload.keepMediaColors, immediateModify]) : '';
       if (next === signature) return;
       if (active) {
-        engine.enable(payload.dynamicTheme, {
+        engine.enable({ ...payload.dynamicTheme, immediateModify }, {
           // Preserve photographs, covers and sprites; no blanket image inversion.
           ignoreImageAnalysis: payload.keepMediaColors !== false ? ['*'] : [],
           ignoreInlineStyle: ['[data-dm-overlay]'],

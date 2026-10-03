@@ -3,7 +3,7 @@ const KEY = 'dark.mode.language';
 const messages = {
   'zh-CN': {
     extName: '深色模式 - 网页夜间模式',
-    extDesc: '按网站调节亮度、对比度、色温和定时。',
+    extDesc: '按网站调节亮度、对比度和色温。',
     settingsTitle: '深色模式设置',
     settingsDesc: '扩展偏好设置保存在本机。',
     language: '语言',
@@ -84,7 +84,7 @@ const messages = {
   },
   'zh-TW': {
     extName: '深色模式 - 網頁夜間模式',
-    extDesc: '按網站調整亮度、對比度、色溫和定時。',
+    extDesc: '按網站調整亮度、對比度和色溫。',
     settingsTitle: '深色模式設定',
     settingsDesc: '擴充功能偏好設定保存在本機。',
     language: '語言',
@@ -165,7 +165,7 @@ const messages = {
   },
   en: {
     extName: 'Dark Mode - Dark Theme for Websites',
-    extDesc: 'Brightness, contrast, warmth, and schedule per site.',
+    extDesc: 'Brightness, contrast, and warmth for each site.',
     settingsTitle: 'Dark Mode settings',
     settingsDesc: 'Preferences stay on this device.',
     language: 'Language',

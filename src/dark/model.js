@@ -288,7 +288,7 @@ export function withSitePatch(settings, hostname, patch) {
   const normalized = normalizeSettings(settings);
   const key = siteKey(hostname);
   if (!isSiteKey(key) || BLOCKED_HOST.test(key)) return normalized;
-  const current = normalized.sites[key] || { mode: normalized.defaultMode === 'off' ? 'dark' : normalized.defaultMode, adjust: null, customCss: '', includeSubdomains: false };
+  const current = normalized.sites[key] || { mode: normalized.defaultMode === 'off' ? 'dark' : normalized.defaultMode, adjust: null, customCss: '', includeSubdomains: true };
   const sites = { ...normalized.sites, [key]: normalizeSite({ ...current, ...patch }, normalized.defaultMode) };
   return normalizeSettings({ ...normalized, sites });
 }

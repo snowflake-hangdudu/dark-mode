@@ -63,7 +63,7 @@ function bindMenus() {
     menus.removeAll(() => {
       menus.create({
         id: 'toggle-site',
-        title: '切换此网站的深色模式',
+        title: api.i18n?.getMessage?.('contextToggleSite') || 'Toggle dark mode for this site',
         contexts: ['page', 'action']
       });
     });

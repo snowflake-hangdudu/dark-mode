@@ -12,6 +12,17 @@ import { buildStylesheet, buildDynamicTheme } from '../src/dark/style.js';
 
 const at = (hour, minute) => new Date(2026, 9, 4, hour, minute, 0);
 
+test('新增网站默认包含子域，已有选择和显式取消保持不变', () => {
+  const added = withSitePatch({}, 'example.com', { mode: 'filter' });
+  assert.equal(added.sites['example.com'].includeSubdomains, true);
+  assert.equal(decide(added, { url: 'https://news.example.com' }).mode, 'filter');
+  const unchecked = withSitePatch(added, 'example.com', { includeSubdomains: false });
+  assert.equal(withSitePatch(unchecked, 'example.com', { mode: 'dark' }).sites['example.com'].includeSubdomains, false);
+  assert.equal(withSitePatch({}, 'example.com', { includeSubdomains: false }).sites['example.com'].includeSubdomains, false);
+  const legacy = normalizeSettings({ sites: { 'example.com': { mode: 'dark' } } });
+  assert.equal(withSitePatch(legacy, 'example.com', { mode: 'filter' }).sites['example.com'].includeSubdomains, false);
+});
+
 test('跨夜定时只在晚上到清晨生效', () => {
   assert.equal(isWithinSchedule(at(21, 0), '20:00', '07:00'), true);
   assert.equal(isWithinSchedule(at(6, 59), '20:00', '07:00'), true);

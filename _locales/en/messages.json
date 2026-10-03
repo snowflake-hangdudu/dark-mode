@@ -4,5 +4,8 @@
   },
   "extDescription": {
     "message": "Turn on a dark theme for websites, and adjust brightness, contrast, and warmth for each site."
+  },
+  "contextToggleSite": {
+    "message": "Toggle dark mode for this site"
   }
 }

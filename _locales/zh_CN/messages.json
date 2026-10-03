@@ -4,5 +4,8 @@
   },
   "extDescription": {
     "message": "为网页开启夜间模式，可按网站调节亮度、对比度和色温。"
+  },
+  "contextToggleSite": {
+    "message": "切换此网站的深色模式"
   }
 }

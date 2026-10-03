@@ -4,5 +4,8 @@
   },
   "extDescription": {
     "message": "為網頁開啟夜間模式，可按網站調整亮度、對比度和色溫。"
+  },
+  "contextToggleSite": {
+    "message": "切換此網站的深色模式"
   }
 }

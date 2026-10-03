@@ -1,6 +1,30 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { exportDocument, settingsFromImport } from '../src/storage/backup.js';
+import { DEFAULT_SETTINGS } from '../src/dark/model.js';
+
+test('备份只含可见功能，导入旧备份忽略隐藏字段', () => {
+  const legacy = {
+    theme: 'dark-crimson', enabled: false, defaultMode: 'filter',
+    followOs: true, scheduleEnabled: true, scheduleStart: '01:00', scheduleEnd: '02:00',
+    darkScrollbar: false, keepMediaColors: false, protectBackgrounds: true,
+    sites: { 'example.com': { mode: 'dark', includeSubdomains: true, customCss: 'body { display:none }', adjust: { brightness: 90 } } }
+  };
+  const exported = exportDocument(legacy).settings;
+  assert.deepEqual(Object.keys(exported), ['theme', 'enabled', 'defaultMode', 'adjust', 'sites']);
+  assert.deepEqual(Object.keys(exported.sites['example.com']), ['mode', 'adjust', 'includeSubdomains']);
+  for (const wrapped of [legacy, { schema: 1, settings: legacy }]) {
+    const imported = settingsFromImport(JSON.stringify(wrapped));
+    for (const key of ['followOs', 'scheduleEnabled', 'scheduleStart', 'scheduleEnd', 'darkScrollbar', 'keepMediaColors', 'protectBackgrounds']) {
+      assert.equal(imported[key], DEFAULT_SETTINGS[key]);
+    }
+    assert.equal(imported.sites['example.com'].customCss, '');
+    assert.equal(imported.sites['example.com'].adjust.brightness, 90);
+    assert.equal(imported.enabled, false);
+    assert.equal(imported.defaultMode, 'filter');
+    assert.deepEqual(exportDocument(imported).settings, exported);
+  }
+});
 
 function installChrome() {
   const values = {};
