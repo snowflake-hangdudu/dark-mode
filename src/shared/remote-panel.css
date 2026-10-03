@@ -1,0 +1,8 @@
+.dm-remote-content { display:grid; gap:8px; margin:12px 0; }
+.dm-remote-content[hidden] { display:none; }
+.dm-remote-section { padding:10px 12px; border:1px solid var(--theme-border); border-radius:10px; background:var(--theme-surface); color:var(--theme-text-secondary); font-size:12px; }
+.dm-remote-section summary { cursor:pointer; color:var(--theme-text-primary); font-weight:600; }
+.dm-remote-section small { display:block; margin-top:8px; color:var(--theme-text-muted); }
+.dm-remote-section ul { padding-left:18px; margin:8px 0; }
+.dm-remote-section li { margin:5px 0; line-height:1.6; }
+.dm-remote-section p { white-space:pre-line; overflow-wrap:anywhere; margin:10px 0 0; line-height:1.65; }

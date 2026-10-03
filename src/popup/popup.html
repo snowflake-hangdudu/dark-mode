@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="extName">深色模式 - 网页夜间模式</title>
+    <link rel="stylesheet" href="../ui/tokens.css">
+    <link rel="stylesheet" href="../ui/components.css">
+    <link rel="stylesheet" href="../ui/ambient.css">
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body class="btu-root">
+    <main class="btu-app-shell btu-surface">
+      <header class="btu-header btu-app-header">
+        <img class="btu-brand-mark" src="../../icons/icon32.png" alt="">
+        <div class="btu-header__copy">
+          <span class="btu-header__title"><span class="dm-ext-name" data-i18n="extName">深色模式 - 网页夜间模式</span> <span class="btu-chip">v1.0.0</span></span>
+          <p class="btu-header__desc" data-i18n="extDesc">按网站调节亮度、对比度、色温和定时。</p>
+        </div>
+        <div class="dm-header-actions">
+          <button id="open-settings" class="btu-icon-btn is-active" type="button" data-i18n-aria="openSettings" data-i18n-title="openSettings" aria-label="设置" title="设置">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94L14.4 2.81a.49.49 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41L9.25 5.35c-.59.24-1.13.56-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87a.49.49 0 0 0 .12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32a.49.49 0 0 0-.12-.61l-2.03-1.58zM12 15.6A3.6 3.6 0 1 1 12 8.4a3.6 3.6 0 0 1 0 7.2z"/></svg>
+          </button>
+          <button id="back-feature" class="btu-icon-btn" type="button" data-i18n-aria="back" data-i18n-title="back" aria-label="返回" title="返回" inert>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.2 4.8 8.05 12l7.15 7.2-1.7 1.7L4.65 12 13.5 3.1l1.7 1.7Z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="dm-pages">
+      <section id="feature-panel" class="btu-app-content dm-page is-active">
+        <div class="btu-toggle-row">
+          <span id="power-dot" class="btu-status-dot" aria-hidden="true"></span>
+          <span>
+            <span class="btu-toggle-row__title" data-i18n="enableDark">启用深色模式</span>
+            <span id="power-meta" class="btu-toggle-row__meta">当前网站</span>
+          </span>
+          <button id="power" class="btu-switch" type="button" role="switch" aria-checked="false" data-i18n-aria="enableDark" aria-label="启用深色模式"></button>
+        </div>
+        <div id="mode-group" class="dm-choice" role="radiogroup" data-i18n-aria="modeGroup" aria-label="模式">
+          <button type="button" role="radio" data-mode="dark" aria-checked="false" data-i18n="modeDark" data-i18n-title="modeHintDark" title="用当前主题给网页上色">深色</button>
+          <button type="button" role="radio" data-mode="filter" aria-checked="false" data-i18n="modeFilter" data-i18n-title="modeHintFilter" title="只调明暗和色温，不改成深色">滤镜</button>
+          <button type="button" role="radio" data-mode="off" aria-checked="false" data-i18n="modeNormal" data-i18n-title="modeHintNormal" title="这个网站保持原样">普通</button>
+        </div>
+        <p id="mode-scope-note" class="dm-hint hidden"></p>
+        <div class="dm-sliders">
+          <label class="dm-slider"><span data-i18n="labelBrightness">亮度</span><input id="brightness" type="range" min="50" max="150" value="100" data-i18n-aria="labelBrightness" aria-label="亮度"><output id="brightness-value">100</output></label>
+          <label class="dm-slider"><span data-i18n="labelContrast">对比</span><input id="contrast" type="range" min="50" max="150" value="100" data-i18n-aria="labelContrast" aria-label="对比"><output id="contrast-value">100</output></label>
+          <label class="dm-slider"><span data-i18n="labelSaturation">饱和</span><input id="saturation" type="range" min="0" max="160" value="100" data-i18n-aria="labelSaturation" aria-label="饱和"><output id="saturation-value">100</output></label>
+          <label class="dm-slider"><span data-i18n="labelWarmth">色温</span><input id="blueLight" type="range" min="0" max="100" value="0" data-i18n-aria="labelWarmth" aria-label="色温"><output id="blueLight-value">0</output></label>
+          <label class="dm-slider"><span data-i18n="labelDim">变暗</span><input id="dim" type="range" min="0" max="70" value="0" data-i18n-aria="labelDim" aria-label="变暗"><output id="dim-value">0</output></label>
+        </div>
+        <div class="dm-choice dm-choice--two" role="group" data-i18n-aria="scopeGroup" aria-label="保存范围">
+          <button id="scope-site" type="button" aria-pressed="true" data-i18n="scopeSite">此网站</button>
+          <button id="scope-all" type="button" aria-pressed="false" data-i18n="scopeAll">全部网站</button>
+        </div>
+        <p id="scope-hint" class="dm-hint" data-i18n="scopeHintSite">调节会记在当前网站上。</p>
+        <div class="dm-actions">
+          <button id="reset-site" class="btu-btn btu-btn--secondary" type="button" data-i18n="resetSite">恢复此网站</button>
+        </div>
+        <div id="rating-prompt" class="dm-rating" hidden></div>
+      </section>
+
+      <section id="settings-panel" class="btu-app-content dm-page" inert>
+        <label class="btu-setting-row" for="language-select">
+          <span class="btu-setting-copy"><strong data-i18n="language">语言</strong></span>
+          <select id="language-select" class="btu-select" data-i18n-aria="language">
+            <option value="zh-CN">简体中文</option>
+            <option value="zh-TW">繁體中文</option>
+            <option value="en">English</option>
+          </select>
+        </label>
+        <div class="dm-theme-block">
+          <div class="dm-theme-copy">
+            <strong data-i18n="theme">主题</strong>
+            <small data-i18n="themeHint">扩展界面和网页共用这一套主题，改一处两边一起变。</small>
+          </div>
+          <div id="theme-picker" class="dm-theme-grid" role="radiogroup" data-i18n-aria="theme" aria-label="主题"></div>
+        </div>
+        <p id="theme-status" class="btu-status btu-status-message hidden" data-tone="info" role="status" aria-live="polite"></p>
+        <p class="dm-feedback"><span data-i18n="feedbackLabel">反馈邮箱</span>：<a href="mailto:hangdudu0@agent.qq.com">hangdudu0@agent.qq.com</a></p>
+      </section>
+      </div>
+
+      <footer class="btu-app-footer">
+        <button id="open-full-settings" class="btu-link-button" type="button" data-i18n="openFullSettings">打开完整设置</button>
+      </footer>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

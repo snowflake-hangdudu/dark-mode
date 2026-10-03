@@ -1,0 +1,294 @@
+{
+  "version": 3,
+  "defaultTheme": "obsidian",
+  "themes": [
+    {
+      "id": "obsidian",
+      "name": "曜石黑",
+      "mode": "dark",
+      "colors": {
+        "background": "#090A0D",
+        "surface": "rgba(18, 20, 24, 0.80)",
+        "surfaceHover": "rgba(24, 27, 32, 0.86)",
+        "surfaceStrong": "rgba(30, 34, 40, 0.90)",
+        "border": "rgba(176, 186, 198, 0.14)",
+        "borderSoft": "rgba(255, 255, 255, 0.07)",
+        "textPrimary": "#F4F5F7",
+        "textSecondary": "#C8CDD3",
+        "textMuted": "#858D97",
+        "primary": "#8B96A4",
+        "primaryStrong": "#707A86",
+        "primaryHover": "#A1AAB5",
+        "primarySoft": "rgba(134, 148, 166, 0.14)",
+        "primaryBorder": "rgba(158, 170, 186, 0.25)",
+        "accent": "#A7B0BA",
+        "accentSecondary": "#66717D",
+        "deepBlue": "#11161C"
+      },
+      "gradients": {
+        "background": "radial-gradient(circle at 84% 14%, rgba(108, 122, 140, 0.12) 0%, rgba(71, 82, 96, 0.04) 34%, transparent 58%), radial-gradient(circle at 12% 88%, rgba(255,255,255,0.025) 0%, transparent 38%)",
+        "primaryButton": "linear-gradient(180deg, #8E99A7 0%, #697581 100%)",
+        "preview": "radial-gradient(circle at 82% 18%, rgba(123, 140, 160, 0.20) 0%, transparent 48%), linear-gradient(135deg, #171A1F 0%, #090A0D 72%)",
+        "header": "linear-gradient(90deg, rgba(145, 157, 172, 0.055), transparent 58%)"
+      },
+      "effects": {
+        "surfaceBlur": "14px",
+        "headerBlur": "16px",
+        "noiseOpacity": 0.032,
+        "shadow": "0 10px 30px rgba(0, 0, 0, 0.24)"
+      }
+    },
+    {
+      "id": "deep-ocean",
+      "name": "深海蓝",
+      "mode": "dark",
+      "colors": {
+        "background": "#08111B",
+        "surface": "rgba(13, 27, 40, 0.80)",
+        "surfaceHover": "rgba(18, 36, 53, 0.86)",
+        "surfaceStrong": "rgba(23, 43, 62, 0.90)",
+        "border": "rgba(83, 136, 190, 0.18)",
+        "borderSoft": "rgba(255, 255, 255, 0.07)",
+        "textPrimary": "#F2F7FB",
+        "textSecondary": "#C5D3DF",
+        "textMuted": "#8095A8",
+        "primary": "#4B84BC",
+        "primaryStrong": "#386993",
+        "primaryHover": "#65A0D3",
+        "primarySoft": "rgba(62, 118, 166, 0.18)",
+        "primaryBorder": "rgba(75, 132, 188, 0.30)",
+        "accent": "#67A6D9",
+        "accentSecondary": "#315C7F",
+        "deepBlue": "#0A2031"
+      },
+      "gradients": {
+        "background": "radial-gradient(circle at 82% 16%, rgba(58, 124, 183, 0.20) 0%, transparent 44%), radial-gradient(circle at 12% 84%, rgba(28, 78, 116, 0.10) 0%, transparent 42%)",
+        "primaryButton": "linear-gradient(180deg, #5B96C8 0%, #3B6F9C 100%)",
+        "preview": "radial-gradient(circle at 82% 18%, rgba(71, 146, 208, 0.42) 0%, transparent 48%), linear-gradient(135deg, #12304A 0%, #08111B 72%)",
+        "header": "linear-gradient(90deg, rgba(75, 132, 188, 0.09), transparent 60%)"
+      },
+      "effects": {
+        "surfaceBlur": "14px",
+        "headerBlur": "16px",
+        "noiseOpacity": 0.032,
+        "shadow": "0 10px 30px rgba(0, 0, 0, 0.24)"
+      }
+    },
+    {
+      "id": "mist-cyan",
+      "name": "苍雾青",
+      "mode": "dark",
+      "colors": {
+        "background": "#081313",
+        "surface": "rgba(14, 31, 31, 0.80)",
+        "surfaceHover": "rgba(19, 40, 40, 0.86)",
+        "surfaceStrong": "rgba(23, 47, 47, 0.90)",
+        "border": "rgba(79, 161, 157, 0.18)",
+        "borderSoft": "rgba(255, 255, 255, 0.07)",
+        "textPrimary": "#F0F8F7",
+        "textSecondary": "#C4D8D6",
+        "textMuted": "#819E9B",
+        "primary": "#4FA59F",
+        "primaryStrong": "#3C7F7B",
+        "primaryHover": "#69BBB5",
+        "primarySoft": "rgba(67, 145, 140, 0.18)",
+        "primaryBorder": "rgba(79, 165, 159, 0.30)",
+        "accent": "#69BBB5",
+        "accentSecondary": "#356D69",
+        "deepBlue": "#0B2221"
+      },
+      "gradients": {
+        "background": "radial-gradient(circle at 18% 16%, rgba(66, 160, 154, 0.18) 0%, transparent 42%), radial-gradient(circle at 86% 78%, rgba(38, 101, 98, 0.09) 0%, transparent 44%)",
+        "primaryButton": "linear-gradient(180deg, #5FB3AD 0%, #3D817C 100%)",
+        "preview": "radial-gradient(circle at 20% 20%, rgba(87, 190, 184, 0.38) 0%, transparent 46%), linear-gradient(135deg, #153633 0%, #081313 72%)",
+        "header": "linear-gradient(90deg, rgba(79, 165, 159, 0.09), transparent 60%)"
+      },
+      "effects": {
+        "surfaceBlur": "14px",
+        "headerBlur": "16px",
+        "noiseOpacity": 0.032,
+        "shadow": "0 10px 30px rgba(0, 0, 0, 0.24)"
+      }
+    },
+    {
+      "id": "night-purple",
+      "name": "夜雾紫",
+      "mode": "dark",
+      "colors": {
+        "background": "#100C18",
+        "surface": "rgba(28, 22, 39, 0.80)",
+        "surfaceHover": "rgba(37, 29, 52, 0.86)",
+        "surfaceStrong": "rgba(44, 34, 61, 0.90)",
+        "border": "rgba(131, 100, 181, 0.18)",
+        "borderSoft": "rgba(255, 255, 255, 0.07)",
+        "textPrimary": "#F6F2FA",
+        "textSecondary": "#D2C8DC",
+        "textMuted": "#9689A6",
+        "primary": "#8064B4",
+        "primaryStrong": "#654A93",
+        "primaryHover": "#997ECB",
+        "primarySoft": "rgba(112, 82, 159, 0.18)",
+        "primaryBorder": "rgba(128, 100, 180, 0.30)",
+        "accent": "#A287D0",
+        "accentSecondary": "#584174",
+        "deepBlue": "#1D162B"
+      },
+      "gradients": {
+        "background": "radial-gradient(circle at 80% 14%, rgba(121, 84, 176, 0.20) 0%, transparent 44%), radial-gradient(circle at 14% 84%, rgba(73, 49, 105, 0.10) 0%, transparent 42%)",
+        "primaryButton": "linear-gradient(180deg, #9277C3 0%, #654A93 100%)",
+        "preview": "radial-gradient(circle at 82% 18%, rgba(144, 102, 205, 0.42) 0%, transparent 48%), linear-gradient(135deg, #2B203C 0%, #100C18 72%)",
+        "header": "linear-gradient(90deg, rgba(128, 100, 180, 0.09), transparent 60%)"
+      },
+      "effects": {
+        "surfaceBlur": "14px",
+        "headerBlur": "16px",
+        "noiseOpacity": 0.032,
+        "shadow": "0 10px 30px rgba(0, 0, 0, 0.24)"
+      }
+    },
+    {
+      "id": "ember-orange",
+      "name": "余烬橙",
+      "mode": "dark",
+      "colors": {
+        "background": "#140D08",
+        "surface": "rgba(35, 24, 16, 0.80)",
+        "surfaceHover": "rgba(46, 31, 20, 0.86)",
+        "surfaceStrong": "rgba(54, 36, 23, 0.90)",
+        "border": "rgba(195, 112, 54, 0.18)",
+        "borderSoft": "rgba(255, 255, 255, 0.07)",
+        "textPrimary": "#FBF5EF",
+        "textSecondary": "#DFCDBE",
+        "textMuted": "#A18774",
+        "primary": "#C56F35",
+        "primaryStrong": "#9B5225",
+        "primaryHover": "#D9854C",
+        "primarySoft": "rgba(177, 91, 38, 0.18)",
+        "primaryBorder": "rgba(197, 111, 53, 0.30)",
+        "accent": "#E1935D",
+        "accentSecondary": "#7D421F",
+        "deepBlue": "#24160D"
+      },
+      "gradients": {
+        "background": "radial-gradient(circle at 84% 16%, rgba(204, 92, 33, 0.21) 0%, transparent 44%), radial-gradient(circle at 14% 82%, rgba(110, 52, 21, 0.10) 0%, transparent 42%)",
+        "primaryButton": "linear-gradient(180deg, #D47C42 0%, #9B5225 100%)",
+        "preview": "radial-gradient(circle at 82% 20%, rgba(227, 105, 41, 0.42) 0%, transparent 46%), linear-gradient(135deg, #351C0F 0%, #140D08 72%)",
+        "header": "linear-gradient(90deg, rgba(197, 111, 53, 0.09), transparent 60%)"
+      },
+      "effects": {
+        "surfaceBlur": "14px",
+        "headerBlur": "16px",
+        "noiseOpacity": 0.032,
+        "shadow": "0 10px 30px rgba(0, 0, 0, 0.24)"
+      }
+    },
+    {
+      "id": "copper-smoke",
+      "name": "铜烟棕",
+      "mode": "dark",
+      "colors": {
+        "background": "#15100C",
+        "surface": "rgba(37, 29, 23, 0.80)",
+        "surfaceHover": "rgba(48, 38, 29, 0.86)",
+        "surfaceStrong": "rgba(56, 44, 33, 0.90)",
+        "border": "rgba(162, 112, 73, 0.18)",
+        "borderSoft": "rgba(255, 255, 255, 0.07)",
+        "textPrimary": "#F7F2ED",
+        "textSecondary": "#D6C9BE",
+        "textMuted": "#98897D",
+        "primary": "#A86F48",
+        "primaryStrong": "#805235",
+        "primaryHover": "#BD855D",
+        "primarySoft": "rgba(145, 92, 57, 0.18)",
+        "primaryBorder": "rgba(168, 111, 72, 0.30)",
+        "accent": "#C28B63",
+        "accentSecondary": "#6F472F",
+        "deepBlue": "#261A13"
+      },
+      "gradients": {
+        "background": "radial-gradient(circle at 18% 16%, rgba(165, 99, 56, 0.17) 0%, transparent 42%), radial-gradient(circle at 84% 78%, rgba(95, 63, 43, 0.09) 0%, transparent 44%)",
+        "primaryButton": "linear-gradient(180deg, #B87C54 0%, #805235 100%)",
+        "preview": "radial-gradient(circle at 20% 20%, rgba(185, 111, 66, 0.36) 0%, transparent 46%), linear-gradient(135deg, #34241A 0%, #15100C 72%)",
+        "header": "linear-gradient(90deg, rgba(168, 111, 72, 0.085), transparent 60%)"
+      },
+      "effects": {
+        "surfaceBlur": "14px",
+        "headerBlur": "16px",
+        "noiseOpacity": 0.032,
+        "shadow": "0 10px 30px rgba(0, 0, 0, 0.24)"
+      }
+    },
+    {
+      "id": "dark-crimson",
+      "name": "暗绯红",
+      "mode": "dark",
+      "colors": {
+        "background": "#120A0D",
+        "surface": "rgba(33, 20, 25, 0.80)",
+        "surfaceHover": "rgba(44, 26, 33, 0.86)",
+        "surfaceStrong": "rgba(52, 31, 39, 0.90)",
+        "border": "rgba(171, 72, 91, 0.18)",
+        "borderSoft": "rgba(255, 255, 255, 0.07)",
+        "textPrimary": "#FBF2F4",
+        "textSecondary": "#DDC5CB",
+        "textMuted": "#A08088",
+        "primary": "#A84358",
+        "primaryStrong": "#7F3042",
+        "primaryHover": "#BE5A6E",
+        "primarySoft": "rgba(151, 54, 75, 0.18)",
+        "primaryBorder": "rgba(168, 67, 88, 0.30)",
+        "accent": "#C7677A",
+        "accentSecondary": "#6E293A",
+        "deepBlue": "#251016"
+      },
+      "gradients": {
+        "background": "radial-gradient(circle at 82% 16%, rgba(163, 52, 76, 0.19) 0%, transparent 44%), radial-gradient(circle at 14% 84%, rgba(92, 32, 48, 0.09) 0%, transparent 42%)",
+        "primaryButton": "linear-gradient(180deg, #B94F65 0%, #7F3042 100%)",
+        "preview": "radial-gradient(circle at 82% 20%, rgba(191, 62, 89, 0.38) 0%, transparent 46%), linear-gradient(135deg, #35151D 0%, #120A0D 72%)",
+        "header": "linear-gradient(90deg, rgba(168, 67, 88, 0.085), transparent 60%)"
+      },
+      "effects": {
+        "surfaceBlur": "14px",
+        "headerBlur": "16px",
+        "noiseOpacity": 0.032,
+        "shadow": "0 10px 30px rgba(0, 0, 0, 0.24)"
+      }
+    },
+    {
+      "id": "pine-mist",
+      "name": "松雾绿",
+      "mode": "dark",
+      "colors": {
+        "background": "#08110E",
+        "surface": "rgba(14, 29, 24, 0.80)",
+        "surfaceHover": "rgba(19, 38, 31, 0.86)",
+        "surfaceStrong": "rgba(23, 45, 37, 0.90)",
+        "border": "rgba(71, 143, 112, 0.18)",
+        "borderSoft": "rgba(255, 255, 255, 0.07)",
+        "textPrimary": "#F0F8F4",
+        "textSecondary": "#C5D8CE",
+        "textMuted": "#829C8E",
+        "primary": "#4D8F73",
+        "primaryStrong": "#376C55",
+        "primaryHover": "#64A88B",
+        "primarySoft": "rgba(63, 124, 98, 0.18)",
+        "primaryBorder": "rgba(77, 143, 115, 0.30)",
+        "accent": "#6BAC90",
+        "accentSecondary": "#315F4B",
+        "deepBlue": "#0B2119"
+      },
+      "gradients": {
+        "background": "radial-gradient(circle at 18% 16%, rgba(58, 136, 105, 0.18) 0%, transparent 42%), radial-gradient(circle at 86% 80%, rgba(33, 82, 63, 0.09) 0%, transparent 44%)",
+        "primaryButton": "linear-gradient(180deg, #5E9E82 0%, #376C55 100%)",
+        "preview": "radial-gradient(circle at 20% 20%, rgba(72, 154, 119, 0.37) 0%, transparent 46%), linear-gradient(135deg, #153128 0%, #08110E 72%)",
+        "header": "linear-gradient(90deg, rgba(77, 143, 115, 0.085), transparent 60%)"
+      },
+      "effects": {
+        "surfaceBlur": "14px",
+        "headerBlur": "16px",
+        "noiseOpacity": 0.032,
+        "shadow": "0 10px 30px rgba(0, 0, 0, 0.24)"
+      }
+    }
+  ]
+}

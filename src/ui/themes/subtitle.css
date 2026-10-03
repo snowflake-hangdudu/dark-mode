@@ -1,0 +1,6 @@
+[data-theme="subtitle"] {
+  --btu-accent: #00aeec;
+  --btu-accent-hover: #009bd3;
+  --btu-accent-soft: #e8f8fe;
+  --btu-accent-ring: rgba(0, 174, 236, 0.18);
+}

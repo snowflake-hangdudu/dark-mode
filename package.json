@@ -1,0 +1,16 @@
+{
+  "name": "dark-mode",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "pack": "npm run pack:chromium && npm run pack:firefox",
+    "pack:chromium": "python scripts/pack.py",
+    "pack:firefox": "python scripts/pack_firefox.py",
+    "vendor": "node scripts/vendor-darkreader.mjs"
+  },
+  "dependencies": {
+    "darkreader": "4.9.133"
+  }
+}
